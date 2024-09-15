@@ -9,7 +9,8 @@ namespace TestTaskTolstikov.Core.Models
 
         public Ellipse(double radiusX, double RadiusY):base(radiusX)
         {
-
+            SetRadius(radiusX);
+            SetRadiusY(RadiusY);
         }
 
         public Ellipse(double radiusX,double radiusY, double xPosition, double yPosition):base(radiusX,xPosition,yPosition)

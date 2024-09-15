@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestTaskTolstikov"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1000">
+        Title="MainWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Height="500" Width="1000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -15,29 +15,85 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <Canvas Height="200"/>
+            <Canvas x:Name="cnvCircle" Height="200"/>
             <Label>Круг</Label>
-            <Button>Нарисовать</Button>
+            <Label>Радиус</Label>
+            <TextBox x:Name="tbxCircleRadius" Margin="0,0,0,10" PreviewTextInput="tbxCircleRadius_PreviewTextInput">50</TextBox>
+            <Button x:Name="btnDrawCircle" Click="btnDrawCircle_Click" >Нарисовать</Button>
         </StackPanel>
+        
         <StackPanel Grid.Column="1">
-            <Canvas Height="200"/>
+            <Canvas x:Name="cnvSquare" Height="200"/>
             <Label>Квадрат</Label>
-            <Button>Нарисовать</Button>
+            <Label>Размер</Label>
+            <TextBox x:Name="tbxSquareSize" Margin="0,0,0,10" PreviewTextInput="tbxCircleRadius_PreviewTextInput">100</TextBox>
+            <Button x:Name="btnDrawSquare" Click="btnDrawSquare_Click" >Нарисовать</Button>
         </StackPanel>
+        
         <StackPanel Grid.Column="2">
-            <Canvas Height="200"/>
+            <Canvas x:Name="cnvTriangle"  Height="200"/>
             <Label>Треугольник</Label>
-            <Button>Нарисовать</Button>
+
+            <Label>Точка A</Label>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="tbxTriangleAX" Width="100" PreviewTextInput="tbxCircleRadius_PreviewTextInput">150</TextBox>
+                <TextBox x:Name="tbxTriangleAY" Width="100" PreviewTextInput="tbxCircleRadius_PreviewTextInput">100</TextBox>
+            </StackPanel>
+
+            <Label>Точка B</Label>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="tbxTriangleBX" Width="100" PreviewTextInput="tbxCircleRadius_PreviewTextInput">100</TextBox>
+                <TextBox x:Name="tbxTriangleBY" Width="100" PreviewTextInput="tbxCircleRadius_PreviewTextInput">50</TextBox>
+            </StackPanel>
+
+            <Label>Точка C</Label>
+            <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+                <TextBox x:Name="tbxTriangleCX" Width="100" PreviewTextInput="tbxCircleRadius_PreviewTextInput">50</TextBox>
+                <TextBox x:Name="tbxTriangleCY" Width="100" PreviewTextInput="tbxCircleRadius_PreviewTextInput">100</TextBox>
+            </StackPanel>
+
+            <Button x:Name="btnDrawTriangle" Click="btnDrawTriangle_Click">Нарисовать</Button>
         </StackPanel>
+        
         <StackPanel Grid.Column="3">
-            <Canvas Height="200"/>
+            <Canvas x:Name="cnvEllipse" Height="200"/>
             <Label>Элипс</Label>
-            <Button>Нарисовать</Button>
+            <Label>Радиус X</Label>
+            <TextBox x:Name="tbxEllipseX" Margin="0,0,0,0" PreviewTextInput="tbxCircleRadius_PreviewTextInput">50</TextBox>
+            <Label>Радиус Y</Label>
+            <TextBox x:Name="tbxEllipseY" Margin="0,0,0,10" PreviewTextInput="tbxCircleRadius_PreviewTextInput">100</TextBox>
+            <Button x:Name="btnDrawEllipse" Click="btnDrawEllipse_Click">Нарисовать</Button>
         </StackPanel>
+        
         <StackPanel Grid.Column="4">
-            <Canvas Height="200"/>
+            <Canvas x:Name="cnvQuad" Height="200"/>
             <Label>Четырехугольник</Label>
-            <Button>Нарисовать</Button>
+
+            <Label>Точка A</Label>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="tbxQuadAX" Width="100" PreviewTextInput="tbxCircleRadius_PreviewTextInput">10</TextBox>
+                <TextBox x:Name="tbxQuadAY" Width="100" PreviewTextInput="tbxCircleRadius_PreviewTextInput">10</TextBox>
+            </StackPanel>
+
+            <Label>Точка B</Label>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="tbxQuadBX" Width="100" PreviewTextInput="tbxCircleRadius_PreviewTextInput">100</TextBox>
+                <TextBox x:Name="tbxQuadBY" Width="100" PreviewTextInput="tbxCircleRadius_PreviewTextInput">10</TextBox>
+            </StackPanel>
+
+            <Label>Точка C</Label>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="tbxQuadCX" Width="100" PreviewTextInput="tbxCircleRadius_PreviewTextInput">120</TextBox>
+                <TextBox x:Name="tbxQuadCY" Width="100" PreviewTextInput="tbxCircleRadius_PreviewTextInput">50</TextBox>
+            </StackPanel>
+
+            <Label>Точка D</Label>
+            <StackPanel Margin="0,0,0,10" Orientation="Horizontal">
+                <TextBox x:Name="tbxQuadDX" Width="100" PreviewTextInput="tbxCircleRadius_PreviewTextInput">50</TextBox>
+                <TextBox x:Name="tbxQuadDY" Width="100" PreviewTextInput="tbxCircleRadius_PreviewTextInput">100</TextBox>
+            </StackPanel>
+
+            <Button x:Name="btnDrawQuad" Click="btnDrawQuad_Click">Нарисовать</Button>
         </StackPanel>
     </Grid>
 </Window>

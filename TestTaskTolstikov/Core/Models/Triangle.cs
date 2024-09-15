@@ -13,11 +13,12 @@ namespace TestTaskTolstikov.Core.Models
 
         public Pen _pen { get; set; }
 
-        public Triangle(Point a, Point b, Point c)
+        public Triangle(Point a, Point b, Point c,Pen pen)
         {
             _pA = a;
             _pB = b;
             _pC = c;
+            _pen = pen;
         }
 
         protected override void OnRender(DrawingContext drawingContext)

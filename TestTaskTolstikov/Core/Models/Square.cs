@@ -21,6 +21,14 @@ namespace TestTaskTolstikov.Core.Models
             SetLenght(lenght);
         }
 
+        public Square(double lenght, Pen pen, double xPosition, double yPosition)
+        {
+            _pen = pen;
+            SetLenght(lenght);
+            _xPosition = xPosition;
+            _yPosition = yPosition;
+        }
+
         public void SetLenght(double value)
         {
             if (value > 0)

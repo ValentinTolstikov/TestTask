@@ -25,7 +25,7 @@ namespace TestTaskTolstikov.Core.Models
             _pen = pen;
         }
 
-        public override void OnRender(DrawingContext drawingContext)
+        protected override void OnRender(DrawingContext drawingContext)
         {
             drawingContext.DrawLine(_pen, _pointA, _pointB);
         }
