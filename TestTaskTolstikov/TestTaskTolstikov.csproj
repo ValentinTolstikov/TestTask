@@ -65,10 +65,12 @@
     </Compile>
     <Compile Include="Core\Models\Circle.cs" />
     <Compile Include="Core\Models\Ellipse.cs" />
-    <Compile Include="Core\Models\Interfaces\IFigure.cs" />
-    <Compile Include="Core\Models\Point.cs" />
-    <Compile Include="Core\Models\Rectangle.cs" />
+    <Compile Include="Core\Interfaces\IFigure.cs" />
+    <Compile Include="Core\Models\Figure.cs" />
+    <Compile Include="Core\Models\Line.cs" />
+    <Compile Include="Core\Models\Quadrilateral.cs" />
     <Compile Include="Core\Models\Square.cs" />
+    <Compile Include="Core\Models\Triangle.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
